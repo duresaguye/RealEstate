@@ -34,7 +34,7 @@ export default function HomePage() {
         <section className="relative">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <Image
-              src="/hero.png"
+              src="/placeholder.svg?height=800&width=1920"
               className="object-cover w-full h-full brightness-[0.6]"
               width={1920}
               height={800}
@@ -78,7 +78,7 @@ export default function HomePage() {
               beds={5}
               baths={6}
               sqft={4700}
-              imageSrc="/hero.png"
+              imageSrc="/placeholder.svg?height=600&width=800"
               slug="/properties/modern-beachfront-villa"
             />
             <PropertyCard
@@ -88,7 +88,7 @@ export default function HomePage() {
               beds={3}
               baths={3.5}
               sqft={3200}
-              imageSrc="/hero.png"
+              imageSrc="/placeholder.svg?height=600&width=800"
               slug="/properties/luxury-downtown-penthouse"
             />
             <PropertyCard
@@ -98,7 +98,7 @@ export default function HomePage() {
               beds={6}
               baths={7}
               sqft={6300}
-              imageSrc="/hero.png"
+              imageSrc="/placeholder.svg?height=600&width=800"
               slug="/properties/mediterranean-style-estate"
             />
           </div>
@@ -143,7 +143,7 @@ export default function HomePage() {
             <div className="md:w-1/2">
               <div className="relative">
                 <Image
-                  src="/hero.png"
+                  src="/placeholder.svg?height=600&width=800"
                   width={800}
                   height={600}
                   alt="Real estate agent with clients"
@@ -209,19 +209,19 @@ export default function HomePage() {
                 name="Michael Thompson"
                 role="Home Buyer"
                 quote="Working with LuxuryEstate was an absolute pleasure. They found us our dream home in just two weeks of searching!"
-                imageSrc="/hero.png"
+                imageSrc="/placeholder.svg?height=100&width=100"
               />
               <TestimonialCard
                 name="Jennifer Davis"
                 role="Property Seller"
                 quote="The team's marketing strategy and negotiation skills helped me sell my property above asking price. Couldn't be happier!"
-                imageSrc="/hero.png"
+                imageSrc="/placeholder.svg?height=100&width=100"
               />
               <TestimonialCard
                 name="Robert Wilson"
                 role="Investor"
                 quote="Their market insights and investment recommendations have consistently yielded exceptional returns on my property portfolio."
-                imageSrc="/hero.png"
+                imageSrc="/placeholder.svg?height=100&width=100"
               />
             </div>
           </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
               className="group relative overflow-hidden rounded-lg shadow-md h-80"
             >
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Beverly Hills"
@@ -254,7 +254,7 @@ export default function HomePage() {
             </Link>
             <Link href="/neighborhoods/manhattan" className="group relative overflow-hidden rounded-lg shadow-md h-80">
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Manhattan"
@@ -270,7 +270,7 @@ export default function HomePage() {
               className="group relative overflow-hidden rounded-lg shadow-md h-80"
             >
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Miami Beach"
@@ -287,7 +287,7 @@ export default function HomePage() {
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <Image
-              src="/hero.png"
+              src="/placeholder.svg?height=600&width=1920"
               className="object-cover w-full h-full brightness-[0.3]"
               width={1920}
               height={600}

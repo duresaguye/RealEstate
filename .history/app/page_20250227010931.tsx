@@ -241,7 +241,7 @@ export default function HomePage() {
               className="group relative overflow-hidden rounded-lg shadow-md h-80"
             >
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Beverly Hills"
@@ -254,7 +254,7 @@ export default function HomePage() {
             </Link>
             <Link href="/neighborhoods/manhattan" className="group relative overflow-hidden rounded-lg shadow-md h-80">
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Manhattan"
@@ -270,7 +270,7 @@ export default function HomePage() {
               className="group relative overflow-hidden rounded-lg shadow-md h-80"
             >
               <Image
-                src="/hero.png"
+                src="/placeholder.svg?height=600&width=800"
                 width={800}
                 height={600}
                 alt="Miami Beach"
@@ -287,7 +287,7 @@ export default function HomePage() {
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <Image
-              src="/hero.png"
+              src="/placeholder.svg?height=600&width=1920"
               className="object-cover w-full h-full brightness-[0.3]"
               width={1920}
               height={600}
