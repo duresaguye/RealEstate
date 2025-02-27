@@ -119,8 +119,7 @@ export default function AgentProfilePage({ params }: { params: { slug: string } 
               <div className="sticky top-24">
                 <div className="rounded-lg overflow-hidden mb-6">
                   <Image
-                    //src={agent.imageSrc || "/agent.png"} for indivually images
-                    src={"/agent.png"}
+                    src={agent.imageSrc || "/agent.png"}
                     alt={agent.name}
                     width={400}
                     height={600}

@@ -51,7 +51,7 @@ const getAgentBySlug = (slug: string) => {
         beds: 6,
         baths: 7,
         sqft: 6300,
-        imageSrc: "/hero.png",
+        imageSrc: "/placeholder.svg?height=600&width=800",
         slug: "/properties/mediterranean-style-estate",
       },
       {
@@ -61,7 +61,7 @@ const getAgentBySlug = (slug: string) => {
         beds: 4,
         baths: 4.5,
         sqft: 3800,
-        imageSrc: "/hero.png",
+        imageSrc: "/placeholder.svg?height=600&width=800",
         slug: "/properties/contemporary-hollywood-hills",
       },
     ],
@@ -73,7 +73,7 @@ const getAgentBySlug = (slug: string) => {
         beds: 3,
         baths: 3.5,
         sqft: 3200,
-        imageSrc: "/hero.png",
+        imageSrc: "/placeholder.svg?height=600&width=800",
         slug: "/properties/luxury-penthouse",
       },
       {
@@ -83,7 +83,7 @@ const getAgentBySlug = (slug: string) => {
         beds: 7,
         baths: 8,
         sqft: 9500,
-        imageSrc: "/hero.png",
+        imageSrc: "/placeholder.svg?height=600&width=800",
         slug: "/properties/spanish-colonial-revival",
       },
     ],
@@ -119,8 +119,7 @@ export default function AgentProfilePage({ params }: { params: { slug: string } 
               <div className="sticky top-24">
                 <div className="rounded-lg overflow-hidden mb-6">
                   <Image
-                    //src={agent.imageSrc || "/agent.png"} for indivually images
-                    src={"/agent.png"}
+                    src={agent.imageSrc || "/placeholder.svg"}
                     alt={agent.name}
                     width={400}
                     height={600}

@@ -18,10 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans`}>{children}
+      <body className={`${inter.variable} font-sans`}>{children}</body>
       <Toaster />
-      </body>
-      
     </html>
   )
 }

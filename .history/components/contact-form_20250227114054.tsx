@@ -8,7 +8,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
-import { toast } from "sonner"
+import { toast } from "@/components/ui/toast"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -52,7 +52,10 @@ export default function ContactForm({ agentName }: ContactFormProps) {
     // In a real application, you would send this data to your server
     console.log(values)
 
-    toast.success("Message sent! We'll get back to you as soon as possible.")
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    })
 
     form.reset()
   }

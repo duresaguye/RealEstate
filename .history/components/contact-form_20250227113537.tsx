@@ -1,14 +1,14 @@
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm, UseFormRegisterReturn } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import * as z from "zod"
 
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { toast } from "sonner"
+import { Button } from "@/ui/button"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/ui/form"
+import { Input } from "@/ui/input"
+import { Textarea } from "@/ui/textarea"
+import { Checkbox } from "@/ui/checkbox"
+import { toast } from "@/ui/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -52,7 +52,10 @@ export default function ContactForm({ agentName }: ContactFormProps) {
     // In a real application, you would send this data to your server
     console.log(values)
 
-    toast.success("Message sent! We'll get back to you as soon as possible.")
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    })
 
     form.reset()
   }
@@ -64,7 +67,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="name"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
@@ -77,7 +80,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="email"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
@@ -93,7 +96,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="phone"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Phone</FormLabel>
                 <FormControl>
@@ -106,7 +109,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="propertyType"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Property Type (Optional)</FormLabel>
                 <FormControl>
@@ -121,7 +124,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="budget"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Budget Range (Optional)</FormLabel>
               <FormControl>
@@ -135,7 +138,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="message"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
@@ -149,7 +152,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="newsletter"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
@@ -169,3 +172,4 @@ export default function ContactForm({ agentName }: ContactFormProps) {
     </Form>
   )
 }
+
