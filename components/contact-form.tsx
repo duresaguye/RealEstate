@@ -1,6 +1,6 @@
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm, UseFormRegisterReturn } from "react-hook-form"
+import { useForm, UseFormRegisterReturn, FieldValues, UseFormReturn, ControllerRenderProps, ControllerFieldState, UseFormStateReturn } from "react-hook-form"
 import * as z from "zod"
 
 import { Button } from "@/components/ui/button"
@@ -64,7 +64,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="name"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "name">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
@@ -77,7 +77,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="email"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "email">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
@@ -93,7 +93,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="phone"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "phone">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
               <FormItem>
                 <FormLabel>Phone</FormLabel>
                 <FormControl>
@@ -106,7 +106,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
           <FormField
             control={form.control}
             name="propertyType"
-            render={({ field }: { field: UseFormRegisterReturn }) => (
+            render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "propertyType">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
               <FormItem>
                 <FormLabel>Property Type (Optional)</FormLabel>
                 <FormControl>
@@ -121,7 +121,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="budget"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "budget">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
             <FormItem>
               <FormLabel>Budget Range (Optional)</FormLabel>
               <FormControl>
@@ -135,7 +135,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="message"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "message">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
@@ -149,7 +149,7 @@ export default function ContactForm({ agentName }: ContactFormProps) {
         <FormField
           control={form.control}
           name="newsletter"
-          render={({ field }: { field: UseFormRegisterReturn }) => (
+          render={({ field, fieldState, formState }: { field: ControllerRenderProps<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }, "newsletter">; fieldState: ControllerFieldState; formState: UseFormStateReturn<{ name: string; email: string; phone: string; message: string; propertyType?: string | undefined; budget?: string | undefined; newsletter?: boolean | undefined; }> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
               <FormControl>
                 <Checkbox checked={field.value} onCheckedChange={field.onChange} />
